@@ -1,0 +1,26 @@
+<h1>Mashable</h1>
+
+<h3>Sort stories by:<h3>
+  <a href='/'>Date</a><br>
+  <a href='/channel'>Category</a><br>
+  <a href='/author'>Author</a><br>
+
+
+
+<ul>
+  <% @authors.each do |author| %>
+  <li> <h2><%= author %></h2> </li>
+  
+      <% @stories.each do |s| %>
+             <% if s['author'] == author %>
+          <li>
+          <img src= '<%= s['image'] %>' /> <br>
+          <a href = '<%= s['link'] %>'>
+          <%= s['title'] %></li>
+          </a>
+          </li> <br><br>
+             <% end %>
+      <% end %>
+  <% end %>
+  
+</ul>

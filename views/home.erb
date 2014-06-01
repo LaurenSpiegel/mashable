@@ -1,0 +1,16 @@
+<!-- View page not used in current app version -->
+
+<h1>Mashable</h1>
+
+
+<ul>
+  <% @stories.each do |s| %>
+  <li>
+    <img src= '<%= s['image'] %>' />
+    <a href = '<%= s['link'] %>'><br><br>
+    <%= s['title'] %></li>
+  </a>
+</li>
+  <% end %>
+  
+</ul>
